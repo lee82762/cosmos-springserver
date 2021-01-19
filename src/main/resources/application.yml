@@ -1,0 +1,58 @@
+spring:
+  jwt:
+    secret: JsonWebTokenSecretKey
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cosmos?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: cosmos_user
+    password: 1q2w3e4r!!
+    #url: jdbc:mysql://cosmoslab.cck0vjgitdxo.us-east-1.rds.amazonaws.com:3306/cosmoslab?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    #username: cosmos
+    #password: cosmos606!
+
+
+    #url: jdbc:mysql://db.cwv3ildpq0id.us-east-2.rds.amazonaws.com:3306/cosmos?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    #username: cosmos
+    #password: sec031031!
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database: mysql
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+
+cloud:
+  aws:
+    s3:
+      bucket: aws-kstars-file
+      dirName: kstars
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+      credentials:
+        instanceProfile: true
+        accessKey: AKIAXZCY2QYDC7ZLLXUW
+        secretKey: 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
+
+resources:
+  file-locations: C:\KStarsFile\
+  file-url: 127.0.0.1:8080
+#  file-locations : /home/ubuntu/ec2-user/file/
+#  file-url : 18.221.109.14:8080
+restTemplate:
+  factory:
+    readTimeout: 5000
+    connectTimeout: 3000
+  httpClient:
+    maxConnTotal: 100
+    maxConnPerRoute: 5
