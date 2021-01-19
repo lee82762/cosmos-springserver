@@ -3,12 +3,14 @@ spring:
     secret: JsonWebTokenSecretKey
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cosmos?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: cosmos_user
-    password: 1q2w3e4r!!
-    #url: jdbc:mysql://cosmoslab.cck0vjgitdxo.us-east-1.rds.amazonaws.com:3306/cosmoslab?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    #username: cosmos
-    #password: cosmos606!
+    #url: jdbc:mysql://localhost:3306/cosmos?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    #username: cosmos_user
+    #password: 1q2w3e4r!!
+
+
+    url: jdbc:mysql://cosmosdb.cck0vjgitdxo.us-east-1.rds.amazonaws.com:3306/cosmosdb?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: cosmos
+    password: cosmos606!
 
 
     #url: jdbc:mysql://db.cwv3ildpq0id.us-east-2.rds.amazonaws.com:3306/cosmos?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
