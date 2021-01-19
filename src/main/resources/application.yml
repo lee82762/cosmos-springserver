@@ -7,8 +7,8 @@ spring:
     #username: cosmos_user
     #password: 1q2w3e4r!!
 
-
-    url: jdbc:mysql://cosmosdb.cck0vjgitdxo.us-east-1.rds.amazonaws.com:3306/cosmosdb?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    //rds 연결
+    url: jdbc:mysql://cosmosdb.cck0vjgitdxo.us-east-1.rds.amazonaws.com:3306/cosmosDB?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: cosmos
     password: cosmos606!
 
