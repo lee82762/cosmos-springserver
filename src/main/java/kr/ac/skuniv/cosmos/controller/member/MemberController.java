@@ -7,14 +7,12 @@ import kr.ac.skuniv.cosmos.service.member.MemberCreateService;
 import kr.ac.skuniv.cosmos.service.member.MemberSignInService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-
+//허용
 @RestController
+@CrossOrigin
 @RequestMapping("/cosmos/kStars")
 @RequiredArgsConstructor
 public class MemberController {
@@ -22,6 +20,7 @@ public class MemberController {
     private final MemberCreateService memberCreateService;
     private final MemberSignInService memberSignInService;
 
+  
     @PostMapping(value = "/signUp")
     public ResponseEntity createMember(@RequestBody MemberCreateDto memberCreateDto){
         MemberGetDto savedMember = memberCreateService.createMember(memberCreateDto);
