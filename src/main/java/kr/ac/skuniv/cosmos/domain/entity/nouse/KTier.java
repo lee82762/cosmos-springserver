@@ -16,4 +16,5 @@ public class KTier {
     public String data5 = "";
     public String data6 = "";
     public List<String> datas;
+
 }

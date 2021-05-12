@@ -22,9 +22,7 @@ public class MemberSignInService {
     @Transactional(readOnly = true)
     public String signIn(MemberSignInDto memberSignInDto) {
         Member member = memberRepository.findByEmail(memberSignInDto.getEmail()).orElseThrow(MemberNotFoundException::new);
-
         checkPw(memberSignInDto, member);
-
         return jwtService.createJwt(member.getEmail());
     }
 

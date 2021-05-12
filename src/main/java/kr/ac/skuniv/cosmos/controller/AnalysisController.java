@@ -28,6 +28,7 @@ public class AnalysisController {
         return ResponseEntity.ok(analysisService.analysisTest(analysisDto));
     }
 
+
     @PostMapping("/analysis2")
     public ResponseEntity<AnalysisDto> analysisController2(@RequestBody AnalysisDto analysisDto) {
         return ResponseEntity.ok(analysisService.analysisTest2(analysisDto));

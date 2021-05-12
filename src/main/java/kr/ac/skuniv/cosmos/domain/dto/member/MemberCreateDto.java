@@ -18,6 +18,7 @@ public class MemberCreateDto {
                 .role("USER")
                 .build();
     }
+
     @Builder
     public MemberCreateDto(String email,
                            String password) {

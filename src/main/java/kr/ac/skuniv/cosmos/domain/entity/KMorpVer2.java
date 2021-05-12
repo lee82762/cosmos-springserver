@@ -15,4 +15,5 @@ public class KMorpVer2 {
     private String speaker;
     private String morp;
     private String user;
+
 }
