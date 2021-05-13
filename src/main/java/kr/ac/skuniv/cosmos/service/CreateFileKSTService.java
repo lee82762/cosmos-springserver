@@ -22,7 +22,7 @@ public class CreateFileKSTService {
     public void createKSTFile(KSTProject kstProject) {
 
          //KSTProject result = restTemplate.postForObject("http://localhost:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
-          KSTProject result = restTemplate.postForObject("http://3.86.166.99:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
+          KSTProject result = restTemplate.postForObject("http://172.31.87.6:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
          ObjectMapper objectMapper = new ObjectMapper();
 
         System.out.println(result.getM_Audio());
@@ -41,7 +41,7 @@ public class CreateFileKSTService {
 
         kstProject.getUserDto().setId(member.getEmail());
         //KSTProject result = restTemplate.postForObject("http://localhost:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
-        KSTProject result = restTemplate.postForObject("http://3.86.166.99:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
+        KSTProject result = restTemplate.postForObject("http://172.31.87.6:5000/cosmos/KStars/create/kst", kstProject, KSTProject.class);
         ObjectMapper objectMapper = new ObjectMapper();
 
         System.out.println(result);
